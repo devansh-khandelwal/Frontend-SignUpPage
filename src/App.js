@@ -1,6 +1,7 @@
 import './App.css';
 import './styles.css';
 import {useState} from "react";
+import { useMediaQuery } from 'react-responsive'
 // import logo from './logo.svg';
 // import Signup from ./
 // const signUpButton = document.getElementById('signUp');
@@ -27,7 +28,7 @@ const signInFunction= () => {
 		<form action="#">
 			<h1>Create Account</h1>
 			<div className="social-container">
-				<a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
+				<a href="#" className="social"><i class="fab fa-github"></i></a>
 				<a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
 				<a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
 			</div>
@@ -35,14 +36,14 @@ const signInFunction= () => {
 			<input type="text" placeholder="Name" />
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Password" />
-			<button >Sign Up</button>
+			<button>Sign Up</button>
 		</form>
 	</div>
 	<div className="form-container sign-in-container">
 		<form action="#">
-			<h1>Sign in</h1>
+			<h1>Sign in</h1>-
 			<div className="social-container">
-				<a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
+				<a href="#" className="social"><i class="fab fa-github"></i></a>
 				<a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
 				<a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
 			</div>
