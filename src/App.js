@@ -10,15 +10,20 @@ import { useMediaQuery } from 'react-responsive'
 
 function App() {
   const [newClass, setClass]=useState("");
-  
+  const [currentState,setcurrentState]= useState(false);
+
   const signUpFunction =() => {
-	console.log("Hello World");
+
 	setClass("right-panel-active");
+	setcurrentState(!currentState);
 }
+
+
 
 
 const signInFunction= () => {
 	setClass("");
+	setcurrentState(!currentState);
 } 
 
 	return (
@@ -56,12 +61,12 @@ const signInFunction= () => {
 	</div>
 	<div className="overlay-container">
 		<div className="overlay">
-			<div className="overlay-panel overlay-left">
+			<div className={`overlay-panel overlay-left ${currentState===false? "colorClass":""}`}>
 				<h1>Welcome Back!</h1>
 				<p>To keep connected with us please login with your personal info</p>
 				<button onClick={signInFunction} className="ghost" id="signIn">Sign In</button>
 			</div>
-			<div className="overlay-panel overlay-right">
+			<div className={`overlay-panel overlay-right ${currentState===true? "colorClass":""}`}>
 				<h1>Hello, Friend!</h1>
 				<p>Enter your personal details and start journey with us</p>
 				<button onClick={signUpFunction} className="ghost" id="signUp">Sign Up</button>
